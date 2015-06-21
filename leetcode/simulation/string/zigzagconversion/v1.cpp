@@ -1,5 +1,6 @@
 /*
 * 模拟拉链。 注意到每个字符的位置都是可以计算出来的，所以只要把每行字母出现的式子找出来就可以了。
+* 思路: 按每个V型是一个单元，每个单元第1个和最底下一个出现一次，剩余的都出现2次。
 * 边界条件：1. 注意别越界 2. n=1退化成输出字符串
 * Status: Accepted Runtime: 20 ms
 */
@@ -16,7 +17,7 @@ public:
         stringstream ss;
         int grap = 2 * numRows - 2;
         if (grap == 0) {
-            grap = 1;
+            return s;
         }
         int size = s.size();
         for (int i = 0; i < numRows; i++) {
