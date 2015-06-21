@@ -2,6 +2,7 @@
 * Only consider
 * (1) s[i] >= s[i+1], add s[i]
 * (2) s[i] < s[i+1], substract s[i+1] - s[i]
+* 44ms
 */
 
 class Solution {
